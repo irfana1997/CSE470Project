@@ -78,7 +78,7 @@ if ($res = mysqli_query($conn, $sql)) {
 ';
                         if(isset($_SESSION['pet_id_filter_user'])) {
                             $animal_id = $_SESSION['pet_id_filter_user'];
-                            include 'fetch-pet-name.php';
+                            include '../Model/fetch-pet-name.php';
                             echo '  <p>
                                     <div style="font-size: large;">
                                         Filter

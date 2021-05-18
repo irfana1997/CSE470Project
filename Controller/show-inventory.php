@@ -20,12 +20,12 @@ if ($res = mysqli_query($conn, $sql)) {
                     <div class="cart-list">';
                         if(isset($_SESSION['pet_id_filter'])) {
                             $animal_id = $_SESSION['pet_id_filter'];
-                            include 'fetch-pet-name.php';
+                            include '../Model/fetch-pet-name.php';
                             echo '  <p>
                                     <div style="font-size: large;">
                                         Filter
                                     </div>
-                                    <form action="Controller/clear_pet_filter.php" method="GET">
+                                    <form action="../Controller/clear_pet_filter.php" method="GET">
                                         Animal: '.$fetched_pet_name.' &nbsp &nbsp
                                         <input type="submit" class="btn btn-primary py-1 px-2" value="clear">
                                     </form>
